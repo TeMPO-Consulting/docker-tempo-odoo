@@ -98,7 +98,7 @@ ADD vimrc /home/docker/.vimrc
 ADD zshrc /home/docker/.zshrc
 
 # Open some ports: 22(SSH), 5432(POSTGRESQL), 8061(Odoo Web Client)
-EXPOSE 22 5432 8061
+EXPOSE 22 5432 8069
 
 # Add VOLUMEs to allow backup of config, logs and databases
 #VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]

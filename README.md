@@ -16,12 +16,12 @@ Then you have to build an image from this repository:
 
 Now you have to run the container. But have a look to an example of what could be done:
 
-    docker run -d -p 2280:22 -p 8061 --name odoo odoo:latest /usr/bin/supervisord
+    docker run -d -p 2280:22 -p 8069:8069 --name odoo odoo:latest /usr/bin/supervisord
 
 We know that:
 
   * it will be run in daemon (**-d** option)
-  * we open port 8061 (Cf. ``docker ps`` to know which port)
+  * we open port 8069 (local machine and in docker)
   * we open port 22 on port 2280 on our machine so that we use 2280 to access to the docker
   * the name of the container will be **odoo**
   * on our machine, we use the **odoo:latest** docker base to create this container (we built it previously)
@@ -83,3 +83,17 @@ Then, in the given SSH prompt, just tape:
     eclipse
 
 and it will launch Eclipse.
+
+# Known problems
+
+## Internal Server Error
+
+Try to access here: http://localhost:8069/web/database/selector
+
+And then use **Manage Databases** link so that you can create a new database.
+
+It seems that the first database creation failed with this error:
+
+    QWebTemplateNotFound: External ID not found in the system: web.login
+
+with no other explanation. Very strange.

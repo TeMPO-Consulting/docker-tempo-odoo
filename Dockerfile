@@ -51,7 +51,7 @@ RUN gpasswd -a docker utmp
 RUN chsh -s /usr/bin/zsh docker
 
 # Add Odoo dependancies
-RUN apt-get install -y adduser python postgresql-client python-dateutil python-docutils python-feedparser python-gdata python-imaging python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psutil python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-requests python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi wkhtmltopdf
+RUN apt-get install -y adduser python postgresql-client python-dateutil python-docutils python-decorator python-feedparser python-gdata python-imaging python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psutil python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-pypdf python-reportlab python-requests python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi wkhtmltopdf
 
 # Add Odoo Development dependancies
 RUN apt-get install -y python-passlib
